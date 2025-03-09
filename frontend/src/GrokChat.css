@@ -96,6 +96,26 @@
   background-color: #1a1a1a;
 }
 
+/* Custom Scrollbar Styling for Chat Messages */
+.chat-messages::-webkit-scrollbar {
+  width: 12px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #00b4d8;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #0093b0;
+}
+
 .message {
   margin: 10px 0;
   padding: 12px;
@@ -136,6 +156,45 @@
 }
 
 .chat-input input[type="text"]:focus {
+  outline: none;
+  background-color: #444;
+}
+
+.chat-input textarea[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  margin-right: 10px;
+  resize: none;
+  overflow-y: auto;
+  min-height: 120px;
+  max-height: 200px;
+}
+
+/* Custom Scrollbar Styling */
+.chat-input textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+.chat-input textarea::-webkit-scrollbar-track {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+.chat-input textarea::-webkit-scrollbar-thumb {
+  background-color: #00b4d8;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.chat-input textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #0093b0;
+}
+
+.chat-input textarea[type="text"]:focus {
   outline: none;
   background-color: #444;
 }

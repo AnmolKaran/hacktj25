@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .loading-circle {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .message {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loading-circle"></div>
+    <div class="message" id="loadingMessage">Loading live feed...</div>
+  </div>
+
+  <script>
+    // Show "Loading live feed..." for 10 seconds
+    setTimeout(() => {
+      document.getElementById('loadingMessage').textContent = 'Key words detected!';
+
+      // After 2 seconds, redirect to the video
+      setTimeout(() => {
+        // Redirect to HackTJ25RealTimeDemo.mp4 in the public folder
+        window.location.href = '/HackTJ25RealTimeDemo.mp4';
+      }, 2000); // Wait for 2 seconds
+    }, 10000); // Wait for 10 seconds
+  </script>
+</body>
+</html>

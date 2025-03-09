@@ -19,7 +19,7 @@ function App() {
 function Home() {
   const navigate = useNavigate();
   const [title, setTitle] = useState('');
-  const fullTitle = "Welcome to WatchDog";
+  const fullTitle = "Welcome to PinPoint";
   const [fadeIn, setFadeIn] = useState(false);
   const [buttonFadeIn, setButtonFadeIn] = useState(false);
 
@@ -42,11 +42,11 @@ function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-teal-400 text-gray-800 p-8 cursor-default">
-      <h1 className="text-6xl font-bold text-white mb-6 font-sans inline-block">
+      <h1 className="text-7xl font-bold text-white mb-12 font-sans inline-block">
         <span className="typing-text">{title}</span><span className="caret"></span>
       </h1>
       <div className={`transition-opacity duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="flex gap-12 mb-8">
+        <div className="flex gap-16 mb-10">
           <Button
             text="ChatBot"
             onClick={() => navigate('/chatbot')}
@@ -63,7 +63,7 @@ function Home() {
           />
         </div>
       </div>
-      <footer className="mt-12 text-center text-gray-200 text-sm">
+      <footer className="mt-12 text-center text-gray-100 text-base">
         <p>Created by Soham Jain, Shaurya Jain, Anmol Karan, and Jason Hao</p>
       </footer>
     </div>
@@ -74,7 +74,7 @@ function Button({ text, onClick, bgColor, hoverColor, fadeIn }) {
   return (
     <button
       onClick={onClick}
-      className={`${bgColor} ${hoverColor} text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg ${fadeIn ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
+      className={`${bgColor} ${hoverColor} text-white font-semibold text-xl py-5 px-16 rounded-full transition-all transform hover:scale-105 shadow-lg ${fadeIn ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
     >
       {text}
     </button>
