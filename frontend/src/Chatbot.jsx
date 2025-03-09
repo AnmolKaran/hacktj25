@@ -6,7 +6,7 @@ import axios from "axios";
 function GrokChat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
-  const [sidebarVideo, setSidebarVideo] = useState(null); // null or {type: 'mp4'|'youtube', url: string}
+  const [sidebarVideo, setSidebarVideo] = useState(null); 
   const [chips, setChips] = useState([]);
   const [ableToChat, setAbleToChat] = useState(false);
 

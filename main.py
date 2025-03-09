@@ -25,14 +25,12 @@ VIDEODB_KEY = ""
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 os.environ["VIDEODB_KEY"] = VIDEODB_KEY
 
-# VideoDB connection
 conn = connect(api_key=VIDEODB_KEY)
 coll = conn.get_collection()
 
-# Global variables
 prompts = []
 real_time_on = False
-current_video = None  # Store the latest processed video
+current_video = None  
 
 class PromptList(BaseModel):
     prompt: list

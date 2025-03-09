@@ -51,16 +51,14 @@
   </div>
 
   <script>
-    // Show "Loading live feed..." for 10 seconds
+    
     setTimeout(() => {
       document.getElementById('loadingMessage').textContent = 'Key words detected!';
 
-      // After 2 seconds, redirect to the video
       setTimeout(() => {
-        // Redirect to HackTJ25RealTimeDemo.mp4 in the public folder
         window.location.href = '/HackTJ25RealTimeDemo.mp4';
-      }, 2000); // Wait for 2 seconds
-    }, 10000); // Wait for 10 seconds
+      }, 2000); 
+    }, 10000); 
   </script>
 </body>
 </html>

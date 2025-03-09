@@ -15,19 +15,17 @@ stream = video.generate_stream()
 
 video.index_spoken_words()
 
-# Index scene content
 index_id = video.index_scenes(
     extraction_type=SceneExtractionType.time_based,
     extraction_config={"time": 2, "select_frames": ["first", "last"]},
     prompt="Describe the scene in detail",
 )
 spoken_query = "Show me where the narrator discusses the formation of the solar system"
-# Perform the search using the spoken query
+
 spoken_results = video.search(
     query=spoken_query,
     index_type=IndexType.spoken_word,
     search_type=SearchType.semantic,
 )
 
-# View the results
 print(spoken_results)
