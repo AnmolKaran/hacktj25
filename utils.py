@@ -25,7 +25,7 @@ np.random.seed(0)
 transformation_prompt = """
 Divide the following query into two distinct parts: one for spoken content and one for visual content. The spoken content should refer to any narration, dialogue, or verbal explanations and The visual content should refer to any images, videos, or graphical representations. Format the response strictly as:\nSpoken: <spoken_query>\nVisual: <visual_query>\n\nQuery: {query}
 """
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = ""
 
 # Initialize OpenAI client
 def download_video(url, output_path):
@@ -222,7 +222,7 @@ def classify(video_path, labels):
 
 
 # Ensure your OpenAI API key is set
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 def find_antonym(word_or_phrase: str) -> str:
     """

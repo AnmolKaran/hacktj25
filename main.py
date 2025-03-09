@@ -20,8 +20,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # Configuration
-OPENAI_API_KEY = "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"
-VIDEODB_KEY = "sk-Ug9TvC77uoKqegQxdlrs0acB9tMcFHfPJvsFa1-xdHA"
+OPENAI_API_KEY = ""
+VIDEODB_KEY = ""
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 os.environ["VIDEODB_KEY"] = VIDEODB_KEY
 

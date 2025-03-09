@@ -5,8 +5,8 @@ from videodb import SceneExtractionType
 from videodb import SearchType, IndexType
 
 
-os.environ["VIDEO_DB_API_KEY"] = "sk-Ug9TvC77uoKqegQxdlrs0acB9tMcFHfPJvsFa1-xdHA"
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["VIDEO_DB_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = ""
 conn = connect()
 coll = conn.get_collection()
 
